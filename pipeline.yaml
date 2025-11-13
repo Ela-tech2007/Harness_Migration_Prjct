@@ -1,0 +1,97 @@
+
+
+template:
+  name: MigratedPipeline
+  identifier: MigratedPipeline
+  versionLabel: ''
+  type: stepGroup
+  projectIdentifier: default_project
+  orgIdentifier: default_org
+  tags: {}
+  spec:
+    stageType: CI
+    steps:
+      - step:
+          type: Run
+          identifier: No_Display_Name
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+      - step:
+          type: Run
+          name: Set up Test Configurations
+          identifier: set_up_test_configurations
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+      - step:
+          type: Run
+          name: Run Tests
+          identifier: run_tests
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+      - step:
+          type: Run
+          identifier: No_Display_Name
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+      - step:
+          type: Run
+          name: List files in testxml directory
+          identifier: list_files_in_testxml_directory
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+            command: ls $(Build.SourcesDirectory)/testxml/
+      - step:
+          type: Run
+          name: List sources directory
+          identifier: list_sources_directory
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+            command: ls $(Build.SourcesDirectory)/
+      - step:
+          type: Run
+          name: List test-output directory
+          identifier: list_testoutput_directory
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+            command: ls $(Build.SourcesDirectory)/test-output/
+      - step:
+          type: Run
+          name: List target directory
+          identifier: list_target_directory
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+            command: ls $(Build.SourcesDirectory)/target/
+      - step:
+          type: Run
+          name: List target directory
+          identifier: list_target_directory
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+            command: ls $(Build.SourcesDirectory)/target/surefire-reports
+      - step:
+          type: Run
+          name: Publish ExtentReports Artifact
+          identifier: publish_extentreports_artifact
+          spec:
+            connectorRef: ''
+            image: ''
+            shell: Sh
+
