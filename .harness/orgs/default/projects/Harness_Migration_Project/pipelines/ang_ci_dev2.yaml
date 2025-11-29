@@ -36,6 +36,8 @@ pipeline:
                   name: build
                   identifier: build
                   spec:
+                    connectorRef: Docker_connector
+                    image: bitnami/node
                     shell: Sh
                     command: |-
                       echo 'test'
