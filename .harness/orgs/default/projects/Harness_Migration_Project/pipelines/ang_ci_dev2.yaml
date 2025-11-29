@@ -42,6 +42,6 @@ pipeline:
                     command: |-
                       echo 'test'
                       npm install -g @angular/cli
-                      npm install
+                      npm run build
   delegateSelectors:
     - harness-gcp-delegate
