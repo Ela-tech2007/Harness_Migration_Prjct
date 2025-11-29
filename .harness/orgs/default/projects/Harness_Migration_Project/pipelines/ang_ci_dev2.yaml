@@ -44,7 +44,7 @@ pipeline:
                   identifier: BuildAndPushGAR_1
                   spec:
                     connectorRef: GAR_Connector
-                    host: asia-south1
+                    host: asia-south1-docker.pkg.dev
                     projectID: global-grammar-475407-a7/angularcli
                     imageName: angular_firebase
                     tags:
