@@ -37,17 +37,9 @@ pipeline:
                   identifier: build
                   spec:
                     shell: Sh
-                    command: echo 'test'
-              - step:
-                  type: BuildAndPushGAR
-                  name: BuildAndPushGAR_1
-                  identifier: BuildAndPushGAR_1
-                  spec:
-                    connectorRef: GAR_Connector
-                    host: asia-south1-docker.pkg.dev
-                    projectID: global-grammar-475407-a7/angularcli
-                    imageName: angular_firebase
-                    tags:
-                      - "1.0"
+                    command: |-
+                      echo 'test'
+                      npm install -g @angular/cli
+                      npm install
   delegateSelectors:
     - harness-gcp-delegate
