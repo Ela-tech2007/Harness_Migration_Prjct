@@ -49,3 +49,5 @@ pipeline:
                     imageName: angular_firebase
                     tags:
                       - "1.0"
+  delegateSelectors:
+    - harness-gcp-delegate
