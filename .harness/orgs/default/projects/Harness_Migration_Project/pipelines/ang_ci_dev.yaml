@@ -1,0 +1,39 @@
+pipeline:
+  name: ang_ci_dev
+  identifier: ang_ci_dev
+  projectIdentifier: Harness_Migration_Project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: angular_git_connector
+        build: <+input>
+  stages:
+    - stage:
+        name: compile
+        identifier: compile
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: build
+                  identifier: build
+                  spec:
+                    shell: Sh
+                    command: echo  'test'
