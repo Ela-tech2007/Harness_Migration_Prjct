@@ -42,6 +42,6 @@ pipeline:
                     command: |-
                       echo 'test'
                       npm install -g @angular/cli
-                      npm run build
+                      npm run build:angular_firebase
   delegateSelectors:
     - harness-gcp-delegate
