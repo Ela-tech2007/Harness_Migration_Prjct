@@ -7,8 +7,9 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: angular_git_connector
+        connectorRef: angular_firebase_connector
         build: <+input>
+        sparseCheckout: []
   stages:
     - stage:
         name: compile
