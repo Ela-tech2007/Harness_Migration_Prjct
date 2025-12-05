@@ -42,6 +42,5 @@ pipeline:
                     command: |-
                       echo 'test'
                       npm install -g @angular/cli
-                      npm run build:angular_firebase
   delegateSelectors:
     - docker-delegate-ang
