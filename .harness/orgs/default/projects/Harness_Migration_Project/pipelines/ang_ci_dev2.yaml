@@ -42,5 +42,12 @@ pipeline:
                     command: |-
                       echo 'test'
                       npm install -g @angular/cli
+              - step:
+                  type: Run
+                  name: Run_2
+                  identifier: Run_2
+                  spec:
+                    shell: Bash
+                    command: ng build
   delegateSelectors:
     - docker-delegate-ang
