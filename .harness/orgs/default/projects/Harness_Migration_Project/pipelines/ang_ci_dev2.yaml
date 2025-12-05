@@ -42,6 +42,5 @@ pipeline:
                     command: |-
                       echo 'test'
                       npm install -g @angular/cli
-                      ng build
   delegateSelectors:
     - docker-delegate-ang
